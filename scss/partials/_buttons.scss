@@ -1,0 +1,26 @@
+/* Buttons
+================================================== */
+
+.btn {
+   display: inline-block;
+}
+
+.btn-primary {
+   background-color: $link-color;
+   padding: $padding 40px;
+}
+
+.btn-secondary {
+   background-color: $gray-dark;
+   padding: 10px $padding;
+}
+
+.btn-tertiary {
+   background-color: $gray-light;
+   padding: $padding;
+}
+
+.btn-error {
+   background-color: $red;
+   padding: $padding;
+}

@@ -1,0 +1,34 @@
+/* Base
+================================================== */
+
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+li {
+   list-style-type: none;
+}
+
+.disc {
+   li {
+      list-style-type: disc;
+   }
+}
+
+.square {
+   li {
+      list-style-type: square;
+   }
+}
+
+.circle {
+   li {
+      list-style-type: circle;
+   }
+}
+
+a {
+   color: $link-color;
+   text-decoration: none;
+}

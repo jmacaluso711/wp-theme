@@ -1,0 +1,68 @@
+/* COLORS
+================================================== */
+
+// Grayscales
+$black: #000;
+$white: #fff;
+$gray-darkest: darken($white, 87.5%);
+$gray-darker: darken($white, 75%);
+$gray-dark: darken($white, 62.5%);
+$gray: darken($white, 50%);
+$gray-light: darken($white, 37.5%);
+$gray-lighter: darken($white, 25%);
+$gray-lightest: darken($white, 12.5%);
+
+// Standard Colors
+$red: #f00;
+$orange: #f90;
+$yellow: #ff0;
+$green: #0f0;
+$blue: #00f;
+$magenta: #f0f;
+$aqua: #0ff;
+$purple: #800080;
+$cyan: #00ADF2;
+$navy: #000080;
+$silver: #C0C0C0;
+
+// Brand Colors
+
+// Background-color
+$base-background-color: $gray-darkest;
+$base-background-color-dark: $black;
+$base-background-color-light: $gray-darker;
+
+// Base color and complementary color
+$base-color: $gray-lightest;
+$base-color-alt: $gray-lighter;
+$base-color-comp: spin($base-color, 180);
+$base-border-color: $gray;
+
+$accent-color: $cyan;
+$accent-color-alt: $magenta;
+
+// Links
+$link-color: $accent-color;
+$link-hover-color: $accent-color-alt;
+$link-active-color: $accent-color-alt;
+$link-text-decoration: none;
+$link-hover-text-decoration: none;
+
+// TYPE
+// --------------------------------------------------
+
+$monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
+$h1-size: 2.5em;
+$h2-size: 2em;
+$h3-size: 1.5em;
+$h4-size: 1.25em;
+$paragraph-size: .8em;
+
+// Grid
+// --------------------------------------------------
+$offset: 6px;
+$padding: 20px;
