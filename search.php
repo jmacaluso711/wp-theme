@@ -1,4 +1,4 @@
-<?php Theme_Utilities::get_template_parts( array( 'parts/html-header', 'parts/header' ) ); ?>
+<?php get_header(); ?>
 
    <?php if ( have_posts() ): ?>
    <h2>Search Results for '<?php echo get_search_query(); ?>'</h2>   
@@ -13,4 +13,4 @@
    <h2>No results found for '<?php echo get_search_query(); ?>'</h2>
    <?php endif; ?>
 
-<?php Theme_Utilities::get_template_parts( array( 'parts/footer','parts/html-footer' ) ); ?>
+<?php get_footer(); ?>

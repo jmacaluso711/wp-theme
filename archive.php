@@ -1,4 +1,4 @@
-<?php Theme_Utilities::get_template_parts( array( 'parts/html-header', 'parts/header' ) ); ?>
+<?php get_header(); ?>
 
    <?php if ( have_posts() ): ?>
 
@@ -26,4 +26,4 @@
    <h2>No posts to display</h2>  
    <?php endif; ?>
 
-<?php Theme_Utilities::get_template_parts( array( 'parts/footer','parts/html-footer' ) ); ?>
+<?php get_footer(); ?>

@@ -1,4 +1,4 @@
-<?php Theme_Utilities::get_template_parts( array( 'parts/html-header', 'parts/header' ) ); ?>
+<?php get_header(); ?>
 
    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -19,4 +19,4 @@
    </article>
    <?php endwhile; ?>
 
-<?php Theme_Utilities::get_template_parts( array( 'parts/footer','parts/html-footer' ) ); ?>
+<?php get_footer(); ?>
