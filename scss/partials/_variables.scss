@@ -26,6 +26,7 @@ $navy: #000080;
 $silver: #C0C0C0;
 
 // Brand Colors
+// $brand-color-1: blue;
 
 // Background-color
 $base-background-color: $gray-darkest;
@@ -51,18 +52,21 @@ $link-hover-text-decoration: none;
 // TYPE
 // --------------------------------------------------
 
+$body-font: arial, helvetica, sans-serif;
+$heading-font: arial, helvetica, sans-serif;
+$line-height: 1.4;
+$color-body: $gray-darker;
+$color-headings: $gray-darkest;
+
+$color-highlight-bg: $gray-lightest; //Change per theme
+$color-highlight: $white;
+
+$serif: georgia, serif;
 $monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
 
 $font-weight-normal: normal;
 $font-weight-bold: bold;
 
-$h1-size: 2.5em;
-$h2-size: 2em;
-$h3-size: 1.5em;
-$h4-size: 1.25em;
-$paragraph-size: .8em;
-
-// Grid
+// Spacing Helper
 // --------------------------------------------------
-$offset: 6px;
-$padding: 20px;
+$spacing: 20px;

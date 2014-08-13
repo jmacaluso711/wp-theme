@@ -1,31 +1,22 @@
 /* Base
 ================================================== */
 
-ul {
-   margin: 0;
-   padding: 0;
+html {
+   font-size: 16px;
 }
 
-li {
-   list-style-type: none;
-}
-
-.disc {
-   li {
-      list-style-type: disc;
-   }
-}
-
-.square {
-   li {
-      list-style-type: square;
-   }
-}
-
-.circle {
-   li {
-      list-style-type: circle;
-   }
+body,
+button,
+input,
+select,
+textarea, 
+small {
+   font-family: $body-font;
+   line-height: $line-height;
+   color: $color-body;
+   font-weight: normal;
+   font-style: normal; 
+   font-size-adjust: auto;
 }
 
 a {
