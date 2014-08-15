@@ -25,8 +25,12 @@ $cyan: #00ADF2;
 $navy: #000080;
 $silver: #C0C0C0;
 
-// Brand Colors
-// $brand-color-1: blue;
+// Brand Colors -- Change per theme
+$brand-main: $cyan;
+$brand-dark: #3d7f99;
+$brand-green: #00ffbd;
+$brand-red: #ff5140;
+$brand-dark-red: #cc1438;
 
 // Background-color
 $base-background-color: $gray-darkest;
@@ -39,8 +43,8 @@ $base-color-alt: $gray-lighter;
 $base-color-comp: spin($base-color, 180);
 $base-border-color: $gray;
 
-$accent-color: $cyan;
-$accent-color-alt: $magenta;
+$accent-color: $brand-main; // Change per Theme
+$accent-color-alt: $brand-dark; // Change per Theme
 
 // Links
 $link-color: $accent-color;
@@ -52,16 +56,20 @@ $link-hover-text-decoration: none;
 // TYPE
 // --------------------------------------------------
 
-$body-font: arial, helvetica, sans-serif;
-$heading-font: arial, helvetica, sans-serif;
+$serif: georgia, serif;
+$sans-serif: arial, helvetica, sans-serif;
+
+$body-font: $sans-serif;
+$heading-font: $serif;
+
 $line-height: 1.4;
-$color-body: $gray-darker;
-$color-headings: $gray-darkest;
+
+$color-body: $gray-dark;
+$color-headings: $gray-darker;
 
 $color-highlight-bg: $gray-lightest; //Change per theme
 $color-highlight: $white;
 
-$serif: georgia, serif;
 $monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
 
 $font-weight-normal: normal;
@@ -69,4 +77,5 @@ $font-weight-bold: bold;
 
 // Spacing Helper
 // --------------------------------------------------
-$spacing: 20px;
+
+$spacing: 1em;

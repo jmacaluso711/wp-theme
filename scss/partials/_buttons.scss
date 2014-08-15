@@ -7,20 +7,20 @@
 
 .btn-primary {
    background-color: $link-color;
-   padding: $padding 40px;
+   padding: $spacing 40px;
 }
 
 .btn-secondary {
    background-color: $gray-dark;
-   padding: 10px $padding;
+   padding: 10px $spacing;
 }
 
 .btn-tertiary {
    background-color: $gray-light;
-   padding: $padding;
+   padding: $spacing;
 }
 
 .btn-error {
    background-color: $red;
-   padding: $padding;
+   padding: $spacing;
 }

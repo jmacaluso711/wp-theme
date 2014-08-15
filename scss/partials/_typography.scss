@@ -20,8 +20,8 @@
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
    color: $color-headings;
-   font-family: $heading-font;
-   font-weight: normal;
+   font-family: $sans-serif;
+   font-weight: bold;
    text-rendering: optimizeLegibility;
 }
 .h1, .h2 { line-height: 1.1; }
@@ -31,8 +31,8 @@
 .h3 { font-size: 200%; }
 .h4 { font-size: 180%; }
 .h5 { font-size: 130%; }
-.h6 { font-size: 100%; }
-.p  { font-size: 100%; }
+.h6 { font-size: 100%; text-transform: uppercase;}
+.p  { font-size: 100%; line-height: $line-height;}
 
 .italic { font-style: italic; }
 .bold   { font-weight: 700; }

@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     livereload = require('gulp-livereload'),
     imagemin = require('gulp-imagemin');
+    //Todo - Add svgstore and js minify
 
 gulp.task('sass', function() {
   return gulp.src('sass/style.scss')
