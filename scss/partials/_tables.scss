@@ -38,10 +38,6 @@ table {
     }
     tr {
       td, th {
-        -webkit-transition: background-color 0.25s 0 linear;
-        -moz-transition: background-color 0.25s 0 linear;
-        -ms-transition: background-color 0.25s 0 linear;
-        -o-transition: background-color 0.25s 0 linear;
         transition: background-color 0.25s 0 linear;
       }
       &:hover {

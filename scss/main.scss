@@ -1,5 +1,5 @@
 
-/* Variables & Mixins ----------------- */
+/* Global Variables & Mixins ---------- */
 // @import bourbon/bourbon;
 @import "partials/_variables";
 
@@ -17,6 +17,8 @@
 
 /* Layout ----------------------------- */
 @import "partials/_layout";
+
+/* Modules ---------------------------- */
 @import "partials/_modules";
 
 /* Theme ------------------------------ */

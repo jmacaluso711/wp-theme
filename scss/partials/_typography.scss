@@ -31,8 +31,8 @@
 .h3 { font-size: 200%; }
 .h4 { font-size: 180%; }
 .h5 { font-size: 130%; }
-.h6 { font-size: 100%; text-transform: uppercase;}
-.p  { font-size: 100%; line-height: $line-height;}
+.h6 { font-size: 100%; }
+.p  { font-size: 100%; }
 
 .italic { font-style: italic; }
 .bold   { font-weight: 700; }
@@ -51,7 +51,8 @@ h3, .h3 { @extend .h3; margin: 1em 0 0.5em; }
 h4, .h4 { @extend .h4; margin: 1em 0 0.5em; }
 h5, .h5 { @extend .h5; margin: 1em 0 0.5em; }
 h6, .h6 { @extend .h6; margin: 1em 0 0.5em; text-transform: uppercase;}
-p, ul, ol, pre { @extend .block-margins; }
+p, .p, li { @extend .p; line-height: $line-height;}
+p, .p, ul, ol, pre { @extend .block-margins; }
 ul { @extend .unordered-list; }
 ol { @extend .ordered-list; }   
 ul ul, ol ol { margin-left: 2.0em; }
