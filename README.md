@@ -1,4 +1,4 @@
-## Install Gulp in your theme directory
+## Install gulp in your theme directory
 
 ```
 npm install --save-dev gulp
@@ -18,7 +18,7 @@ npm install gulp-livereload
 npm install gulp-imagemin
 ```
 
-## Run Gulp
+## Run gulp
 
 ```
 gulp
