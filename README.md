@@ -1,3 +1,7 @@
+# WP Theme
+
+Boilerplate theme for WordPress sites.
+
 ## Install gulp in your theme directory
 
 ```
@@ -15,7 +19,9 @@ npm install gulp-autoprefixer
 
 npm install gulp-livereload
 
-npm install gulp-imagemin
+npm install gulp-svgmin
+
+npm install gulp-svgstore
 ```
 
 ## Run gulp
