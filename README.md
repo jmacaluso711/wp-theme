@@ -2,6 +2,24 @@
 
 Boilerplate theme for WordPress sites.
 
+## If using Bourbon/Neat
+
+### Install Bourbon and Neat in current directory:
+
+```
+bourbon install
+```
+```
+neat install
+```
+
+### Import Neat in your stylesheet, after Bourbon:
+
+```
+@import "bourbon/bourbon";
+@import "neat/neat";
+```
+
 ## Install gulp in your theme directory
 
 ```
