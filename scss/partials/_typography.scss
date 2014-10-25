@@ -21,7 +21,7 @@
 .h1, .h2, .h3, .h4, .h5, .h6 {
    color: $color-headings;
    font-family: $sans-serif;
-   font-weight: bold;
+   font-weight: normal;
    text-rendering: optimizeLegibility;
 }
 .h1, .h2 { line-height: 1.1; }

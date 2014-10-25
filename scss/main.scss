@@ -1,28 +1,28 @@
-
 /* Global Variables & Mixins ---------- */
-// @import bourbon/bourbon;
-@import "partials/_variables";
+// @import "bourbon/bourbon",
+//         "neat/neat";
+@import "partials/variables";
 
 /* Base ------------------------------- */
-@import "partials/_reset";
-@import "partials/_base";
-@import "partials/_grid";
-@import "partials/_global";
-@import "partials/_tables";
-@import "partials/_forms";
-@import "partials/_buttons";
+@import "partials/reset",
+        "partials/base",
+        "partials/grid",
+        "partials/global",
+        "partials/tables",
+        "partials/forms",
+        "partials/buttons";
 
 /* Typography ------------------------- */
-@import "partials/_typography";
+@import "partials/typography";
 
 /* Layout ----------------------------- */
-@import "partials/_layout";
+@import "partials/layout";
 
 /* Modules ---------------------------- */
-@import "partials/_modules";
+@import "partials/modules";
 
 /* Theme ------------------------------ */
-@import "partials/_theme";
+@import "partials/theme";
 
 
 
@@ -32,4 +32,3 @@
    
 
 ================================================== */
-

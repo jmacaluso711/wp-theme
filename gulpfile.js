@@ -6,7 +6,6 @@ var gulp = require('gulp'),
    livereload = require('gulp-livereload'),
    svgmin = require('gulp-svgmin'),
    svgstore = require('gulp-svgstore');
-   //TODO:  Add js minify
 
 gulp.task('sass', function() {
    return gulp.src('sass/style.scss')
@@ -46,7 +45,7 @@ gulp.task('default', function() {
    gulp.watch('svg/*.svg',['svg']);
 
    // Watch .scss files
-   gulp.watch('sass/**/*.scss', ['sass']);
+   gulp.watch('scss/**/*.scss', ['sass']);
 
    // Watch .js files
    gulp.watch('js/*.js', ['compress']);
