@@ -62,6 +62,18 @@ add_filter( 'body_class', array( 'Utilities', 'add_slug_to_body_class' ) );
    Enqueue Stuff
 ------------------------------------------------------------------- */
 
+   // Header Scripts
+   function header_scripts() { ?>
+
+   <?php }
+   add_action('wp_head', 'header_scripts');
+
+   // Footer Scripts
+   function footer_scripts() { ?> 
+
+   <? }
+   add_action('wp_footer', 'footer_scripts');
+
    function theme_scripts() {
       //Stylesheets
       wp_enqueue_style( 'screen', get_stylesheet_uri() );
