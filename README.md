@@ -33,6 +33,8 @@ npm install gulp-ruby-sass
 
 npm install gulp-minify-css
 
+npm install gulp-uglify
+
 npm install gulp-autoprefixer
 
 npm install gulp-livereload
