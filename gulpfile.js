@@ -5,7 +5,8 @@ var gulp = require('gulp'),
    prefix = require('gulp-autoprefixer'),
    livereload = require('gulp-livereload'),
    svgmin = require('gulp-svgmin'),
-   svgstore = require('gulp-svgstore');
+   svgstore = require('gulp-svgstore'),
+   cheerio = require('gulp-cheerio');
 
 gulp.task('sass', function() {
    return gulp.src('sass/style.scss')
@@ -28,10 +29,9 @@ gulp.task('svg', function(){
          fileName: 'icons.svg',
          prefix: 'icon-',
          inlineSvg: true,
-         transformSvg: function transformSvg (svg, cb) {
-            svg.attr({ style: 'display:none' })
-            cb(null)
-         }
+      }))
+      .pipe(cheerio(function($) {
+        $('svg').attr('style', 'display:none');
       }))
       .pipe(gulp.dest('img/svg-sprite/'))
 });

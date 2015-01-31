@@ -42,6 +42,8 @@ npm install gulp-livereload
 npm install gulp-svgmin
 
 npm install gulp-svgstore
+
+npm install gulp-cheerio
 ```
 
 ## Run gulp
