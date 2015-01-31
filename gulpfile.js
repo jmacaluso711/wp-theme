@@ -9,10 +9,10 @@ var gulp = require('gulp'),
    cheerio = require('gulp-cheerio');
 
 gulp.task('sass', function() {
-   return gulp.src('sass/style.scss')
-      .pipe(sass({ style: 'compressed' }))
-      .pipe(minifycss())
-      .pipe(prefix({ cascade: true }))
+   return sass('scss/main.scss', {style: 'compressed'}) 
+      .on('error', function (err) {
+         console.error('Error', err.message);
+      })
       .pipe(gulp.dest('./'));
 });
 
