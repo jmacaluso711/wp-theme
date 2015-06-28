@@ -2,8 +2,7 @@ var gulp = require('gulp'),
    sass = require('gulp-ruby-sass'),
    minifycss = require('gulp-minify-css'),
    uglify = require('gulp-uglify'),
-   prefix = require('gulp-autoprefixer'),
-   livereload = require('gulp-livereload'),
+   autoprefixer = require('gulp-autoprefixer'),
    svgmin = require('gulp-svgmin'),
    svgstore = require('gulp-svgstore'),
    cheerio = require('gulp-cheerio');
@@ -13,6 +12,10 @@ gulp.task('sass', function() {
       .on('error', function (err) {
          console.error('Error', err.message);
       })
+      .pipe(autoprefixer({
+         browsers: ['last 2 versions'],
+         cascade: false
+      }))
       .pipe(gulp.dest('./'));
 });
 
@@ -37,9 +40,6 @@ gulp.task('svg', function(){
 });
 
 gulp.task('default', function() {
-   
-   //livereload
-   livereload.listen();
 
    // SVG Sprite
    gulp.watch('svg/*.svg',['svg']);
