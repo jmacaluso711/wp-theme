@@ -77,7 +77,7 @@ add_filter( 'body_class', array( 'Utilities', 'add_slug_to_body_class' ) );
    function theme_scripts() {
       //Stylesheets
       wp_enqueue_style( 'screen', get_stylesheet_uri() );
-      wp_enqueue_style( 'main', get_template_directory_uri().'/scss/css/main.css' );      
+      wp_enqueue_style( 'main', get_template_directory_uri().'/main.css' );      
       
       //jQuery
       wp_deregister_script('jquery');

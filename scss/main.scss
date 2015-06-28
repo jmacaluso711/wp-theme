@@ -1,34 +1,18 @@
 /* Global Variables & Mixins ---------- */
 // @import "bourbon/bourbon",
 //         "neat/neat";
-@import "partials/variables";
+@import "lib/variables";
 
-/* Base ------------------------------- */
-@import "partials/reset",
-        "partials/base",
-        "partials/grid",
-        "partials/global",
-        "partials/tables",
-        "partials/forms",
-        "partials/buttons";
+/* Lib ------------------------------- */
+@import "lib/reset",
+        "lib/base",
+        "lib/tables",
+        "lib/forms";
 
-/* Typography ------------------------- */
-@import "partials/typography";
-
-/* Layout ----------------------------- */
-@import "partials/layout";
-
-/* Modules ---------------------------- */
-@import "partials/modules";
-
-/* Theme ------------------------------ */
-@import "partials/theme";
-
-
-
-
-/* Table of Contents ============================= 
-
-   
-
-================================================== */
+/* Components ------------------------- */
+@import "components/base",
+        "components/typography"
+        "components/buttons",
+        "components/layout",
+        "components/modules",
+        "components/theme";
