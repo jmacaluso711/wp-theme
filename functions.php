@@ -271,6 +271,23 @@ add_filter( 'body_class', array( 'Utilities', 'add_slug_to_body_class' ) );
   <?php }
   }
 
+  /*
+  * Pagination One Way
+  */
+  function one_way_pagination() {
+    global $wp_query, $post;
+    $next_post = get_adjacent_post(false, '', false);
+    $next_description = get_field('title', $next_post->ID);
+
+    echo '<nav class="one-way-pager">';
+    if(!empty($next_post)) {
+      echo '<a class="one-way--next" href="' . get_permalink($next_post->ID) . '" title="' . $next_post->post_title . '"><span class="single-nav-title">' . $next_post->post_title . '</span><span class="single-nav-desc">'. $next_description .'</span><i class="icon-circle-right"></i></a>';
+    } else {
+      echo '<span class="one-way--end">End of Report</span>';
+    }
+    echo '</nav>';
+  }
+
 /* -------------------------------------------------------------------
    Widget Area
 ------------------------------------------------------------------- */
