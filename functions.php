@@ -196,8 +196,7 @@ add_filter( 'body_class', array( 'Utilities', 'add_slug_to_body_class' ) );
       </ul>
     </div><!-- /.widget-content -->
   </nav><!-- /.widget.widget-subnav -->
-  <?php
-      }
+  <?php }
     }
   }
 
@@ -233,8 +232,7 @@ add_filter( 'body_class', array( 'Utilities', 'add_slug_to_body_class' ) );
       </ul>
     </div><!-- .widget-content -->
   </nav><!-- .widget.widget-subnav.widget-subnav-taxonomies -->
-  <?php
-      }
+  <?php }
     }
   }
 
@@ -253,8 +251,7 @@ add_filter( 'body_class', array( 'Utilities', 'add_slug_to_body_class' ) );
       <li class="nav-next"><?php next_posts_link( __( '&larr; Older', 'bfn' ) ); ?></li>
       <li class="nav-prev"><?php previous_posts_link( __( 'Newer &rarr;', 'bfn' ) ); ?></li>
     </ul>
-  <?php
-    } // endif
+  <?php } // endif
   }
 
   /**
@@ -271,8 +268,7 @@ add_filter( 'body_class', array( 'Utilities', 'add_slug_to_body_class' ) );
       <li class="nav-next"><?php next_post_link( '&larr; %link' ); ?></li>
       <li class="nav-prev"><?php previous_post_link( '%link &rarr;' ); ?></li>
     </ul>
-  <?php
-    }
+  <?php }
   }
 
 /* -------------------------------------------------------------------
