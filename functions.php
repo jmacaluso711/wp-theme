@@ -338,4 +338,67 @@ add_filter( 'body_class', array( 'Utilities', 'add_slug_to_body_class' ) );
       <?php }
    }
 
+/* -------------------------------------------------------------------
+   Footnotes
+------------------------------------------------------------------- */
+
+	//Create footnote shortcode
+	function footnote($atts, $content = null) {
+		extract(shortcode_atts(array(
+			"tooltip" => $tooltip
+		), $atts));
+
+		static $number = 1;
+		return '<sup><a class="footnote-tooltip" title="'.$tooltip.'">'. '[' . $number++ . ']' .'</a></sup>';
+	}
+	add_shortcode('footnote', 'footnote');
+
+	// Add buttons to wysiwyg editor
+	add_action('init', 'add_buttons');
+	function add_buttons() {
+	   if ( current_user_can('edit_posts') && current_user_can('edit_pages') )
+	   {
+	     add_filter('mce_external_plugins', 'add_plugin');
+	     add_filter('mce_buttons', 'register_button');
+	   }
+	}
+	function register_button($buttons) {
+	   array_push($buttons, "footnote");
+	   return $buttons;
+	}
+
+	function add_plugin($plugin_array) {
+	   $plugin_array['footnote'] = get_template_directory_uri() . '/js/footnotes.js';
+	   return $plugin_array;
+	}
+
+	function footnote_table_of_contents($content) {
+		
+		global $post;
+
+		$content = get_sub_field('content');
+
+		preg_match_all('/<a class="footnote-tooltip"[^>]+>(.*)<\/a>/smU', $content, $result);
+
+		$footnote_array = array();
+
+		if (!empty($result) && !empty($result[0])) {
+			echo '<footer class="footer-footnotes">';
+				echo '<h2 class="footer-footnotes__title">Footnotes</h2>';
+				echo '<ol>';
+				foreach($result[0] as $footnote) {
+					preg_match_all('/(title)=("[^"]*")/smU',$footnote,$footnote_array[$footnote]);
+					echo '<li>' . str_replace('"','',$footnote_array[$footnote][2][0]) . '</li>';
+				}
+				echo '</ol>';
+			echo '</footer>';
+		}
+
+	}
+
+	add_action( 'admin_enqueue_scripts', 'footnote_enqueue_admin_scripts' );
+	function footnote_enqueue_admin_scripts() {
+	    wp_enqueue_script( 'jquery' );
+	}
+
 ?>
