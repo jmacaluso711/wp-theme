@@ -1,0 +1,41 @@
+/* Mixins
+================================================== */
+
+// Extra mixins that aren't covered by Bourbon
+
+$regular: 'robotoregular', arial, sans-serif;
+$bold: 'robotobold', arial, sans-serif;
+$black: 'robotoblack', arial, sans-serif;
+
+@mixin font-regular {
+    font-family: $regular;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@mixin font-bold {
+    font-family: $bold;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@mixin font-black {
+    font-family: $black;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+// z-indexes
+
+$z-layers: (
+  modal     : 9000, 
+  overlay   : 8000,
+  dropdown  : 7000,
+  header    : 6000,
+  footer    : 5000
+);
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+  @return map-get($z-layers, $layer);
+}

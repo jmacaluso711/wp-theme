@@ -1,2 +1,39 @@
 /* Layout
 ================================================== */
+
+// BASIC LAYOUT STYLING FOR BACKEND DEV
+
+$gutter: 15px;
+
+@mixin dev-margins-padding {
+    padding: $gutter;
+    margin: $gutter auto;
+}
+
+@mixin dev-containers {
+    background: $gray-lightest;
+}
+
+/* Container width -- Uncomments if using Bourbon/Neat */
+// $container: 1180;
+// $max-width: em($container) !global;
+
+// // Breakpoints
+// $container: new-breakpoint(min-width em($container));
+// $medium: new-breakpoint(min-width em(800));
+// $small: new-breakpoint(min-width em(400));
+
+// Layout
+
+section {
+  &.row {
+    padding: 85px 0;
+    &:nth-child(even) {
+      @include dev-containers;
+    }
+  }
+}
+
+.container {
+  @include outer-container;
+}
