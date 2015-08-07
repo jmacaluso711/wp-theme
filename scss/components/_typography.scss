@@ -20,9 +20,7 @@
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
    color: $color-headings;
-   font-family: $sans-serif;
-   font-weight: normal;
-   text-rendering: optimizeLegibility;
+   @include font-bold;
 }
 .h1, .h2 { line-height: 1.1; }
 .h3, .h4 { line-height: 1.3; }
@@ -45,12 +43,12 @@
 i, em { @extend .italic; }
 b, strong { @extend .bold; }
 
-h1, .h1 { @extend .h1; margin: 1em 0 0.5em; }
-h2, .h2 { @extend .h2; margin: 1em 0 0.5em; }
-h3, .h3 { @extend .h3; margin: 1em 0 0.5em; }
-h4, .h4 { @extend .h4; margin: 1em 0 0.5em; }
-h5, .h5 { @extend .h5; margin: 1em 0 0.5em; }
-h6, .h6 { @extend .h6; margin: 1em 0 0.5em; text-transform: uppercase;}
+h1, .h1 { @extend .h1; margin: 0 0 0.5em; }
+h2, .h2 { @extend .h2; margin: 0 0 0.5em; }
+h3, .h3 { @extend .h3; margin: 0 0 0.5em; }
+h4, .h4 { @extend .h4; margin: 0 0 0.5em; }
+h5, .h5 { @extend .h5; margin: 0 0 0.5em; }
+h6, .h6 { @extend .h6; margin: 0 0 0.5em; text-transform: uppercase;}
 p, .p, li { @extend .p; line-height: $line-height;}
 p, .p, ul, ol, pre { @extend .block-margins; }
 ul { @extend .unordered-list; }

@@ -3,6 +3,7 @@
 
 html {
    font-size: 16px;
+   @include font-regular;
 }
 
 body,
@@ -22,4 +23,25 @@ small {
 a {
    color: $link-color;
    text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+.ie9 img[src*=".svg"] {
+  width: 100%; 
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {
+    width: 100%; 
+  }
 }
