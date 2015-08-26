@@ -3,11 +3,11 @@
 
 // BASIC LAYOUT STYLING FOR BACKEND DEV
 
-$gutter: 15px;
+$spacer: 15px; //Don't use $gutter as it's a default Bourbon/Neat variable
 
 @mixin dev-margins-padding {
-    padding: $gutter;
-    margin: $gutter auto;
+    padding: $spacer;
+    margin: $spacer auto;
 }
 
 @mixin dev-containers {

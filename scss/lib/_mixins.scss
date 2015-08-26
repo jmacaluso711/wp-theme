@@ -7,6 +7,8 @@ $regular: 'robotoregular', arial, sans-serif;
 $bold: 'robotobold', arial, sans-serif;
 $black: 'robotoblack', arial, sans-serif;
 
+$serif: 'georgia', arial, serif;
+
 @mixin font-regular {
     font-family: $regular;
     font-weight: normal;
@@ -21,6 +23,16 @@ $black: 'robotoblack', arial, sans-serif;
     font-family: $black;
     font-weight: normal;
     text-rendering: optimizeLegibility;
+}
+
+@mixin font-serif {
+  font-family: $serif;
+  font-weight: normal;
+}
+
+@mixin font-serif-bold {
+  font-family: $serif;
+  font-weight: bold;
 }
 
 // z-indexes
@@ -38,4 +50,12 @@ $z-layers: (
     @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
   }
   @return map-get($z-layers, $layer);
+}
+
+// Background Images
+
+@mixin background-layout {
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
