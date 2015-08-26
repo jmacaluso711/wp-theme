@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<section class="row">
+
    <?php if ( have_posts() ): ?>
    <h2>Search Results for '<?php echo get_search_query(); ?>'</h2>   
    <?php while ( have_posts() ) : the_post(); ?>
@@ -12,5 +14,7 @@
    <?php else: ?>
    <h2>No results found for '<?php echo get_search_query(); ?>'</h2>
    <?php endif; ?>
+
+</section>
 
 <?php get_footer(); ?>

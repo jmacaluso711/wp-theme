@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<section class="row">
+
    <?php if ( have_posts() ): ?>
 
    <?php if ( is_day() ) : ?>
@@ -25,5 +27,7 @@
    <?php else: ?>
    <h2>No posts to display</h2>  
    <?php endif; ?>
+
+</section>
 
 <?php get_footer(); ?>

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<section class="row">
+
    <?php if ( have_posts() ): ?>
    <h2>Latest Posts</h2>   
    <?php while ( have_posts() ) : the_post(); ?>
@@ -12,5 +14,7 @@
    <?php else: ?>
    <h2>No posts to display</h2>
    <?php endif; ?>
+
+</section>
 
 <?php get_footer(); ?>

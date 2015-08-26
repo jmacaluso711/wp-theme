@@ -36,6 +36,23 @@
 
    <body <?php body_class(); ?>>
       
-      <header>
-         site header
+      <header class="site-header">
+      	 <div class="site-header__logo"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
+         <?php if (has_nav_menu( 'primary' )) : ?>
+         <?php wp_nav_menu(
+				array(
+					'container_class' => 'primary-nav-container',
+					'depth' => 2,
+					'theme_location' => 'primary',
+					'link_before' => '<span>',
+					'link_after' => '</span>',
+					'menu_class' => 'primary-nav'
+				)
+			); ?>
+
+		<?php else : ?>
+
+			<p>Please set Primary nav.</p>
+
+		<?php endif; ?>
       </header>
