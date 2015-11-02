@@ -45,3 +45,41 @@ ul, figure {
     width: 100%; 
   }
 }
+
+/* ----------------------------------------------- WYSIWYG Images */
+
+img[class*="wp-image"] {
+  @include breakpoint($medium){
+    max-width: none;
+    width: auto;
+  }
+}
+.wysiwyg-img {
+    display: block;
+}
+.alignright {
+  float: none;
+  padding: 1em;
+  @include breakpoint($medium){
+    padding: 1em 1em 1em 2em;
+    float: right;
+  }
+  &.size-medium {
+    margin-right: 0;
+    @include breakpoint($medium){
+      margin-right: -150px;
+    }
+  }
+}
+.alignleft {
+  float: none;
+  padding: 1em;
+  @include breakpoint($medium){
+    float: left;
+    padding: 1em 2em 1em 1em;
+  }
+}
+
+.clear {
+  clear: both;
+}

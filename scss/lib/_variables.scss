@@ -1,4 +1,4 @@
-/* COLORS
+/* Variables
 ================================================== */
 
 // Grayscales
@@ -25,6 +25,7 @@ $cyan: #00ADF2;
 $navy: #000080;
 $silver: #C0C0C0;
 
+// White Transparents
 $white-10: rgba(255, 255, 255, .1);
 $white-20: rgba(255, 255, 255, .2);
 $white-30: rgba(255, 255, 255, .3);
@@ -35,6 +36,7 @@ $white-70: rgba(255, 255, 255, .7);
 $white-80: rgba(255, 255, 255, .8);
 $white-90: rgba(255, 255, 255, .9);
 
+// Overlays
 $overlay-10: rgba(0,0,0,.1);
 $overlay-20: rgba(0,0,0,.2);
 $overlay-30: rgba(0,0,0,.3);
@@ -45,53 +47,9 @@ $overlay-70: rgba(0,0,0,.7);
 $overlay-80: rgba(0,0,0,.8);
 $overlay-90: rgba(0,0,0,.9);
 
-// Brand Colors -- Change per theme
+// Brand Colors
 $brand-main: $cyan;
 $brand-dark: #3d7f99;
-$brand-green: #00ffbd;
-$brand-red: #ff5140;
-$brand-dark-red: #cc1438;
 
-// Background-color
-$base-background-color: $gray-darkest;
-$base-background-color-dark: $black;
-$base-background-color-light: $gray-darker;
-
-// Base color and complementary color
-$base-color: $gray-lightest;
-$base-color-alt: $gray-lighter;
-$base-color-comp: spin($base-color, 180);
-$base-border-color: $gray;
-
-$accent-color: $brand-main; // Change per Theme
-$accent-color-alt: $brand-dark; // Change per Theme
-
-// Links
-$link-color: $accent-color;
-$link-hover-color: $accent-color-alt;
-$link-active-color: $accent-color-alt;
-$link-text-decoration: none;
-$link-hover-text-decoration: none;
-
-// TYPE
-// --------------------------------------------------
-
-$serif: georgia, serif;
-$sans-serif: arial, helvetica, sans-serif;
-
-$body-font: $sans-serif;
-$heading-font: $serif;
-
-$line-height: 1.4;
-
-$color-body: $gray-dark;
-$color-headings: $gray-darker;
-
-$color-highlight-bg: $gray-lightest; //Change per theme
-$color-highlight: $white;
-
-$monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
-
-$font-weight-normal: normal;
-$font-weight-bold: bold;
-
+// Accent Colors
+$accent-1: tomato;
