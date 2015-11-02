@@ -23,10 +23,7 @@
 
       <!-- Favicons
       ================================================== -->
-      <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+      <?php include(get_stylesheet_directory() . '/include/favicons.php'); ?>
 
       <!-- WP Head
       ================================================== -->
@@ -35,6 +32,8 @@
    </head>
 
    <body <?php body_class(); ?>>
+
+   	<div class="site">
       
       <header class="site-header">
       	 <div class="site-header__logo"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
@@ -56,3 +55,5 @@
 
 		<?php endif; ?>
       </header>
+
+      <main>
