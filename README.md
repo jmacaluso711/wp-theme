@@ -20,12 +20,6 @@ neat install
 @import "neat/neat";
 ```
 
-## Install gulp in your theme directory
-
-```
-npm install --save-dev gulp
-```
-
 ## Install Node Modules
 
 ```
@@ -38,9 +32,9 @@ npm install
 ```
 gulp
 ```
-### Browser Sync
+#### Browser Sync
 
-#### Paste the following before the closing body tag
+##### Paste the following before the closing body tag
 
 ```
     <script type='text/javascript' id="__bs_script__">//<![CDATA[
