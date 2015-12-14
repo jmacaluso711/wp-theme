@@ -25,13 +25,13 @@ $spacer: 15px; //Don't use $gutter as it's a default Bourbon/Neat variable
 
 /* Breakpoints -- Comment out if using Bourbon/Neat */
 @mixin breakpoint($point) {
-  @if $point = $large {
+  @if $point = large {
     @media (min-width: 1140px) { @content; }
   }
-  @if $point = $medium {
+  @if $point = medium {
     @media (min-width: 800px) { @content; }
   }
-  @if $point = $small {
+  @if $point = small {
     @media (min-width: 400px) { @content; }
   }
 }
@@ -48,5 +48,5 @@ section {
 }
 
 .container {
-  @include outer-container;
+  //@include outer-container; /* If using Bourbon/Neat */
 }

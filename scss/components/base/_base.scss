@@ -12,9 +12,6 @@ input,
 select,
 textarea, 
 small {
-   font-family: $body-font;
-   line-height: $line-height;
-   color: $color-body;
    font-weight: normal;
    font-style: normal; 
    font-size-adjust: auto;
@@ -49,7 +46,7 @@ ul, figure {
 /* ----------------------------------------------- WYSIWYG Images */
 
 img[class*="wp-image"] {
-  @include breakpoint($medium){
+  @include breakpoint(medium){
     max-width: none;
     width: auto;
   }
@@ -60,13 +57,13 @@ img[class*="wp-image"] {
 .alignright {
   float: none;
   padding: 1em;
-  @include breakpoint($medium){
+  @include breakpoint(medium){
     padding: 1em 1em 1em 2em;
     float: right;
   }
   &.size-medium {
     margin-right: 0;
-    @include breakpoint($medium){
+    @include breakpoint(medium){
       margin-right: -150px;
     }
   }
@@ -74,7 +71,7 @@ img[class*="wp-image"] {
 .alignleft {
   float: none;
   padding: 1em;
-  @include breakpoint($medium){
+  @include breakpoint(medium){
     float: left;
     padding: 1em 2em 1em 1em;
   }
