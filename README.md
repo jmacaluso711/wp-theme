@@ -33,8 +33,7 @@ npm install
 gulp
 ```
 #### Browser Sync
-
-##### Paste the following before the closing body tag
+###### Paste the following before the closing body tag
 
 ```
     <script type='text/javascript' id="__bs_script__">//<![CDATA[
