@@ -23,7 +23,7 @@
 
       <!-- Favicons
       ================================================== -->
-      <?php include(get_stylesheet_directory() . '/include/favicons.php'); ?>
+      <?php include(get_stylesheet_directory() . '/includes/favicons.php'); ?>
 
       <!-- WP Head
       ================================================== -->

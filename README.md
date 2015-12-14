@@ -33,13 +33,14 @@ npm install
 ```
 
 ## Run gulp
+###### Note: node v5.2.0 required
 
 ```
 gulp
 ```
-## Browser Sync
+### Browser Sync
 
-### Paste the following before the closing body tag
+#### Paste the following before the closing body tag
 
 ```
     <script type='text/javascript' id="__bs_script__">//<![CDATA[
