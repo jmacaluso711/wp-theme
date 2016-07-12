@@ -1,6 +1,19 @@
 /* Mixins / Extends
 ================================================== */
 
+/* Breakpoints -- Comment out if using Bourbon/Neat */
+@mixin breakpoint($point) {
+  @if $point = large {
+    @media (min-width: 1140px) { @content; }
+  }
+  @if $point = medium {
+    @media (min-width: 800px) { @content; }
+  }
+  @if $point = small {
+    @media (min-width: 400px) { @content; }
+  }
+}
+
 // Fonts Families
 
 $regular: 'robotoregular', arial, sans-serif;
@@ -66,65 +79,3 @@ $z-layers: (
     background-position: center center;
     background-repeat: no-repeat;
 }
-
-// Resizable Boxes -- Uncomment if using Bourbon/Neat
-
-// %fitBoxes--4up {
-//   padding-top: 100%;
-//   @include omega-reset(2n);
-//   @include span-columns(12);
-//   @include media($small_up) {
-//     padding-top: 50%;
-//     @include omega-reset(3n);
-//     @include span-columns(6);
-//     @include omega(2n);
-//   }
-//   @include media($medium_up) {
-//     padding-top: 35%;
-//     @include omega-reset(2n);
-//     @include span-columns(4);
-//     @include omega(3n);
-//   }
-//   @include media($large_up) {
-//     padding-top: 25%;
-//     @include omega-reset(3n);
-//     @include span-columns(3);
-//     @include omega(4n);
-//   }
-// }
-
-// %fitBoxes--3up {
-//   padding-top: 100%;
-//   @include omega-reset(2n);
-//   @include span-columns(12);
-//   @include media($small_up) {
-//     padding-top: 50%;
-//     @include omega-reset(3n);
-//     @include span-columns(6);
-//     @include omega(2n);
-//   }
-//   @include media($medium_up) {
-//     padding-top: 35%;
-//     @include omega-reset(2n);
-//     @include span-columns(4);
-//     @include omega(3n);
-//   }
-// }
-
-// %fitBoxes--1row-3up {
-//   padding-top: 100%;
-//   @include omega-reset(2n);
-//   @include span-columns(12);
-//   @include media($small_up) {
-//     padding-top: 70%;
-//     @include omega-reset(3n);
-//     @include span-columns(12);
-//     @include omega(2n);
-//   }
-//   @include media($medium_up) {
-//     padding-top: 35%;
-//     @include omega-reset(2n);
-//     @include span-columns(4);
-//     @include omega(3n);
-//   }
-// }
