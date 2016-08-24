@@ -23,6 +23,7 @@
         
         //jQuery
         wp_deregister_script('jquery');
+        wp_enqueue_script('jquery', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.min.js', array(), '2.2.4', true);
                 
         //Plugins
         //wp_register_script( 'modernizr', get_template_directory_uri() . '/bower_components/modernizr-min/modernizr.min.js', array(), '2.8.3', false );
@@ -32,6 +33,7 @@
         
         //Enqueue Scripts
         //wp_enqueue_script('modernizr');
+        wp_enqueue_script('jquery');
         wp_enqueue_script('main');
 
     }

@@ -59,6 +59,31 @@ gulp.task('images',function(){
 });
 
 /*
+   SVG Sprite
+*/
+gulp.task('svg', function(svg){
+   return gulp
+      .src('svg/*.svg')
+      .pipe(svgmin())
+      .pipe(rename({
+         prefix: 'icon-'
+      }))
+      .pipe(svgstore({
+         inlineSvg: true
+      }))
+      .pipe(cheerio({
+         run: function ($) {
+            $('[fill]').removeAttr('fill');
+            $('svg').attr('style', 'display:none');
+            $('svg').attr('width', 0);
+            $('svg').attr('height', 0);
+         },
+         parserOptions: { xmlMode: false }
+      }))
+      .pipe(gulp.dest('img/svg-sprite/'))
+});
+
+/*
   Browser Sync
 */
 gulp.task('browser-sync', function() {
@@ -116,7 +141,8 @@ gulp.task('scripts', function() {
 });
 
 // run 'scripts' task first, then watch for future changes
-gulp.task('default', ['images','styles','scripts', 'browser-sync'], function() {
+gulp.task('default', ['images','styles','scripts', 'browser-sync', 'svg'], function() {
   gulp.watch('scss/**/*', ['styles']); // gulp watch for sass changes
+  gulp.watch('svg/*.svg', ['svg'] );
   return buildScript('main.js', true); // browserify watch for JS changes
 });

@@ -10,21 +10,13 @@
 /* ----------------------------------------------- Lib */
 @import "lib/reset",
         "lib/fonts",
-        "lib/tables",
-        "lib/forms",
         "lib/vendor";
 
 /* ----------------------------------------------- Base */
-@import "components/base/base",
-        "components/base/typography",
-        "components/base/buttons";
-
-/* ----------------------------------------------- Layout */
-@import "components/layout/layout",
-        "components/layout/header",
-        "components/layout/navigation",
-        "components/layout/footer";
+@import "base/base",
+        "base/typography",
+        "base/layout";
 
 /* ----------------------------------------------- Theme */
-@import "components/theme/components",
-        "components/theme/front-page";
+
+@import 'theme/theme';
