@@ -10,12 +10,10 @@
       <title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
 
       <!-- Mobile Specific Metas
       ================================================== -->
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
       <!-- Pingback
       ================================================== -->
@@ -33,27 +31,39 @@
 
    <body <?php body_class(); ?>>
 
+      <!-- SVG Sprite
+      ================================================== -->
+      <?php include('img/svg-sprite/svg.svg'); ?>
+
    	<div class="site">
-      
-      <header class="site-header">
-      	 <div class="site-header__logo"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
-         <?php if (has_nav_menu( 'primary' )) : ?>
-         <?php wp_nav_menu(
-				array(
-					'container_class' => 'primary-nav-container',
-					'depth' => 2,
-					'theme_location' => 'primary',
-					'link_before' => '<span>',
-					'link_after' => '</span>',
-					'menu_class' => 'primary-nav'
-				)
-			); ?>
 
-		<?php else : ?>
+         <header class="site-header">
 
-			<p>Please set Primary nav.</p>
+         	<div class="site-header__logo"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
 
-		<?php endif; ?>
-      </header>
+            <?php if (has_nav_menu( 'primary' )) : ?>
 
-      <main>
+               <nav class="site-nav">
+
+                  <?php wp_nav_menu(
+         				array(
+         					'container_class' => 'site-nav__container',
+         					'depth' => 2,
+         					'theme_location' => 'primary',
+         					'link_before' => '<span>',
+         					'link_after' => '</span>',
+         					'menu_class' => 'primary-nav'
+         				)
+         			); ?>
+
+               </nav>
+
+            <?php else : ?>
+
+   			   <p>Please set Primary nav.</p>
+
+   		   <?php endif; ?>
+
+         </header>
+
+         <div class="site-content">

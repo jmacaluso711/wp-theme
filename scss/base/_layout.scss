@@ -4,6 +4,8 @@
 // BASIC LAYOUT STYLING FOR BACKEND DEV
 
 $spacer: 15px; //Don't use $gutter as it's a default Bourbon/Neat variable
+$rowSpacing: 2em;
+$contenBtm: 5em;
 
 @mixin dev-margins-padding {
     padding: $spacer;
@@ -87,15 +89,20 @@ $spacer: 15px; //Don't use $gutter as it's a default Bourbon/Neat variable
 
 // Basic "Rowed" Layout
 
-section {
-  &.row {
-    padding: 85px 0;
-    &:nth-child(even) {
-      @include dev-containers;
-    }
-  }
+%rowSpacing {
+   padding: $rowSpacing 0;
 }
 
+%rowMargin {
+   margin: $rowSpacing 0;
+}
+
+$containerPadding: 1.5em;
+
 .container {
-  //@include outer-container; /* If using Bourbon/Neat */
+   padding: 0 $containerPadding;
+   // @include outer-container; /* If using Bourbon/Neat */
+   // @include media($container) {
+   //    padding: 0;
+   // }
 }

@@ -1,9 +1,5 @@
 <?php get_header(); ?>
 
-<section class="row">
-
-   <h2>Page not found</h2>
-
-</section>
+   <h1>Page not found</h1>
 
 <?php get_footer(); ?>

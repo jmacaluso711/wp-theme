@@ -2,17 +2,17 @@
 ================================================== */
 
 /* Breakpoints -- Comment out if using Bourbon/Neat */
-@mixin breakpoint($point) {
-  @if $point = large {
-    @media (min-width: 1140px) { @content; }
-  }
-  @if $point = medium {
-    @media (min-width: 800px) { @content; }
-  }
-  @if $point = small {
-    @media (min-width: 400px) { @content; }
-  }
-}
+// @mixin breakpoint($point) {
+//   @if $point = large {
+//     @media (min-width: 1140px) { @content; }
+//   }
+//   @if $point = medium {
+//     @media (min-width: 800px) { @content; }
+//   }
+//   @if $point = small {
+//     @media (min-width: 400px) { @content; }
+//   }
+// }
 
 // Fonts Families
 
@@ -51,7 +51,7 @@ $serif: 'georgia', arial, serif;
 // z-indexes
 
 $z-layers: (
-  modal     : 9000, 
+  modal     : 9000,
   overlay   : 8000,
   dropdown  : 7000,
   header    : 6000,
@@ -75,7 +75,14 @@ $z-layers: (
 // Background Images
 
 @mixin background-layout {
-    background-size: cover !important;
-    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+}
+
+// Background Opacity
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
 }
