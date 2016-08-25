@@ -20,8 +20,8 @@ var browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
 
-/* 
-    Styles
+/*
+   Styles
 */
 gulp.task('styles',function() {
   // Compiles CSS
@@ -108,7 +108,7 @@ function buildScript(file, watch) {
     debug : true
   };
 
-  // watchify() if watch requested, otherwise run browserify() once 
+  // watchify() if watch requested, otherwise run browserify() once
   var bundler = watch ? watchify(browserify(props)) : browserify(props);
 
   function rebundle() {
