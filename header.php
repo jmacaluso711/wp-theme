@@ -45,16 +45,18 @@
 
                <nav class="site-nav">
 
-                  <?php wp_nav_menu(
-         				array(
-         					'container_class' => 'site-nav__container',
-         					'depth' => 2,
-         					'theme_location' => 'primary',
-         					'link_before' => '<span>',
-         					'link_after' => '</span>',
-         					'menu_class' => 'primary-nav'
-         				)
-         			); ?>
+                  <?php
+                     wp_nav_menu(
+            				array(
+            					'container_class' => 'site-nav__container',
+            					'depth' => 2,
+            					'theme_location' => 'primary',
+            					'link_before' => '<span>',
+            					'link_after' => '</span>',
+            					'menu_class' => 'primary-nav'
+            				)
+         			   );
+                  ?>
 
                </nav>
 

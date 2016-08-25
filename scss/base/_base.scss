@@ -2,7 +2,7 @@
 ================================================== */
 
 html {
-   font-size: 16px;
+   font-size: 100%;
    @include font-regular;
 }
 
@@ -10,10 +10,10 @@ body,
 button,
 input,
 select,
-textarea, 
+textarea,
 small {
    font-weight: normal;
-   font-style: normal; 
+   font-style: normal;
    font-size-adjust: auto;
 }
 
@@ -23,60 +23,63 @@ a {
 }
 
 img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
+   max-width: 100%;
+   width: 100%;
+   height: auto;
 }
 
 ul, figure {
-  margin: 0;
-  padding: 0;
+   margin: 0;
+   padding: 0;
 }
 
 .ie9 img[src*=".svg"] {
-  width: 100%; 
+   width: 100%;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  img[src*=".svg"] {
-    width: 100%; 
-  }
+   img[src*=".svg"] {
+      width: 100%;
+   }
 }
 
 /* ----------------------------------------------- WYSIWYG Images */
 
 img[class*="wp-image"] {
-  @include breakpoint(medium){
-    max-width: none;
-    width: auto;
-  }
+   @include breakpoint(medium){
+      max-width: none;
+      width: auto;
+   }
 }
+
 .wysiwyg-img {
-    display: block;
+   display: block;
 }
+
 .alignright {
-  float: none;
-  padding: 1em;
-  @include breakpoint(medium){
-    padding: 1em 1em 1em 2em;
-    float: right;
-  }
-  &.size-medium {
-    margin-right: 0;
-    @include breakpoint(medium){
-      margin-right: -150px;
-    }
-  }
+   float: none;
+   padding: 1em;
+   @include breakpoint(medium){
+      padding: 1em 1em 1em 2em;
+      float: right;
+   }
+   &.size-medium {
+      margin-right: 0;
+      @include breakpoint(medium){
+         margin-right: -150px;
+      }
+   }
 }
+
 .alignleft {
-  float: none;
-  padding: 1em;
-  @include breakpoint(medium){
-    float: left;
-    padding: 1em 2em 1em 1em;
-  }
+   float: none;
+   padding: 1em;
+   @include breakpoint(medium){
+      float: left;
+      padding: 1em 2em 1em 1em;
+   }
 }
 
 .clear {
-  clear: both;
+   clear: both;
 }

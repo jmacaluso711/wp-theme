@@ -23,46 +23,46 @@ $black: 'robotoblack', arial, sans-serif;
 $serif: 'georgia', arial, serif;
 
 @mixin font-regular {
-    font-family: $regular;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+   font-family: $regular;
+   font-weight: normal;
+   text-rendering: optimizeLegibility;
 }
 @mixin font-bold {
-    font-family: $bold;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+   font-family: $bold;
+   font-weight: normal;
+   text-rendering: optimizeLegibility;
 }
 @mixin font-black {
-    font-family: $black;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+   font-family: $black;
+   font-weight: normal;
+   text-rendering: optimizeLegibility;
 }
 
 @mixin font-serif {
-  font-family: $serif;
-  font-weight: normal;
+   font-family: $serif;
+   font-weight: normal;
 }
 
 @mixin font-serif-bold {
-  font-family: $serif;
-  font-weight: bold;
+   font-family: $serif;
+   font-weight: bold;
 }
 
 // z-indexes
 
 $z-layers: (
-  modal     : 9000,
-  overlay   : 8000,
-  dropdown  : 7000,
-  header    : 6000,
-  footer    : 5000
+   modal     : 9000,
+   overlay   : 8000,
+   dropdown  : 7000,
+   header    : 6000,
+   footer    : 5000
 );
 
 @function z($layer) {
-  @if not map-has-key($z-layers, $layer) {
-    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
-  }
-  @return map-get($z-layers, $layer);
+   @if not map-has-key($z-layers, $layer) {
+      @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+   }
+   @return map-get($z-layers, $layer);
 }
 
 // Omega Reset -- Uncomment if using Bourbon/Neat
@@ -75,14 +75,14 @@ $z-layers: (
 // Background Images
 
 @mixin background-layout {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
 }
 
 // Background Opacity
 
 @mixin background-opacity($color, $opacity: 0.3) {
-    background: $color; /* The Fallback */
-    background: rgba($color, $opacity);
+   background: $color; /* The Fallback */
+   background: rgba($color, $opacity);
 }

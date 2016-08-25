@@ -8,12 +8,12 @@ $rowSpacing: 2em;
 $contenBtm: 5em;
 
 @mixin dev-margins-padding {
-    padding: $spacer;
-    margin: $spacer auto;
+   padding: $spacer;
+   margin: $spacer auto;
 }
 
 @mixin dev-containers {
-    background: $gray-lightest;
+   background: $gray-lightest;
 }
 
 /* Container width -- Uncomment if using Bourbon/Neat */
