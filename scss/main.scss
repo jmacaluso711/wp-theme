@@ -13,9 +13,9 @@
         "lib/vendor";
 
 /* ----------------------------------------------- Base */
-@import "base/base",
-        "base/typography",
-        "base/layout";
+@import "base/layout",
+        "base/base",
+        "base/typography";
 
 /* ----------------------------------------------- Theme */
 
