@@ -2,17 +2,17 @@
 ================================================== */
 
 /* Breakpoints -- Comment out if using Bourbon/Neat */
-// @mixin breakpoint($point) {
-//   @if $point = large {
-//     @media (min-width: 1140px) { @content; }
-//   }
-//   @if $point = medium {
-//     @media (min-width: 800px) { @content; }
-//   }
-//   @if $point = small {
-//     @media (min-width: 400px) { @content; }
-//   }
-// }
+@mixin breakpoint($point) {
+  @if $point = large {
+    @media (min-width: 1140px) { @content; }
+  }
+  @if $point = medium {
+    @media (min-width: 800px) { @content; }
+  }
+  @if $point = small {
+    @media (min-width: 400px) { @content; }
+  }
+}
 
 // Fonts Families
 
