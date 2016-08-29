@@ -1,0 +1,16 @@
+{
+  "name": "wp-theme",
+  "description": "Boilerplate theme for WordPress sites.",
+  "main": "gulpfile.js",
+  "authors": [
+    "John Macaluso"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "devDependencies": {
+    "jquery": "~3.1.0",
+    "modernizr-min": "~3.2.0"
+  }
+}
