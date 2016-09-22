@@ -30,9 +30,6 @@
     "gulp-svgstore": "^5.0.5",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
-    "hamburgers": "^0.5.0",
-    "jquery": "^2.1.4",
-    "modernizr": "^3.3.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^3.6.1"
