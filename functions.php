@@ -13,5 +13,6 @@ require_once(get_stylesheet_directory() . '/includes/post-metas.php');
 
 // ACF HOOKS
 require_once(get_stylesheet_directory() . '/includes/acf-hooks.php');
+require_once(get_stylesheet_directory() . '/includes/acf-theme-options.php');
 
 ?>
