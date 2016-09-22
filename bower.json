@@ -9,8 +9,9 @@
   "moduleType": [],
   "homepage": "",
   "private": true,
-  "devDependencies": {
-    "jquery": "~3.1.0",
-    "modernizr-min": "~3.2.0"
+  "dependencies": {
+      "css-hamburgers": "~0.5.0",
+      "jquery": "~3.1.0",
+      "modernizr": "~3.3.1"
   }
 }
