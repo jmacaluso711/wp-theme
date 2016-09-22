@@ -144,5 +144,6 @@ gulp.task('scripts', function() {
 gulp.task('default', ['images','styles','scripts', 'browser-sync', 'svg'], function() {
   gulp.watch('scss/**/*', ['styles']); // gulp watch for sass changes
   gulp.watch('svg/*.svg', ['svg'] );
+  gulp.watch('img/**', ['images'] );
   return buildScript('main.js', true); // browserify watch for JS changes
 });
