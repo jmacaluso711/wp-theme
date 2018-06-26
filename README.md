@@ -20,34 +20,23 @@ neat install
 @import "neat/neat";
 ```
 
-## Install gulp in your theme directory
+## Install Node Modules
 
 ```
-npm install --save-dev gulp
-```
-
-## Install required gulp tasks
-
-```
-npm install gulp-ruby-sass
-
-npm install gulp-minify-css
-
-npm install gulp-uglify
-
-npm install gulp-autoprefixer
-
-npm install gulp-livereload
-
-npm install gulp-svgmin
-
-npm install gulp-svgstore
-
-npm install gulp-cheerio
+npm install
 ```
 
 ## Run gulp
+Note: node v5.2.0 required
 
 ```
 gulp
+```
+#### Browser Sync
+Paste the following before the closing body tag
+
+```
+    <script type='text/javascript' id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.10.0.js'><\/script>".replace("HOST", location.hostname));
+    //]]></script>
 ```

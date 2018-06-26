@@ -184,9 +184,12 @@ function show_subpages($sortBy, $sortOrder){
 
 }
 
+<<<<<<< HEAD
 function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+=======
+>>>>>>> d5f99e8250adb58fdf8beb135d909bc9614a6bb9
 ?>

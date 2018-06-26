@@ -6,9 +6,13 @@
 
     add_theme_support('post-thumbnails');
     add_image_size( 'post-thumbnail', 150, 150, true );
+<<<<<<< HEAD
     add_image_size( 'post-card', 800, 800, true );    
     add_image_size( 'banner-thumbnail', 1500, 500, true );
     add_image_size( 'full', 1500, 9999, true );    
+=======
+    add_image_size( 'banner-thumbnail', 1500, 500, true );
+>>>>>>> d5f99e8250adb58fdf8beb135d909bc9614a6bb9
 
     //Remove Height and Width Attributes on images
     add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
