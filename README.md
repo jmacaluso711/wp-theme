@@ -7,7 +7,6 @@ npm install
 npm start
 ```
 
-```
 #### Browser Sync
 Paste the following before the closing body tag
 
