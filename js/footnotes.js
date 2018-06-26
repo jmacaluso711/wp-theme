@@ -9,9 +9,9 @@
         });
 
         ed.addCommand('footnote_command', function(){
-          
+
           ed.windowManager.open(
-            
+
             {
               title: 'Footnote Creator',
               file: '/wp-content/themes/wp-theme/includes/footnote-dialog.php',
@@ -33,7 +33,7 @@
         return null;
     },
   });
-    
+
   tinymce.PluginManager.add('footnote', tinymce.plugins.footnote);
 
 })(jQuery);
