@@ -1,18 +1,17 @@
 const gulp = require('gulp'),
-      postcss = require('gulp-postcss'),
-      postcssnext = require('postcss-cssnext'),
-      cssnano = require('cssnano'),
-      sourcemaps = require('gulp-sourcemaps'),
-      browserify = require('browserify'),
-      browserSync = require('browser-sync'),
-      buffer = require('vinyl-buffer'),
-      source = require('vinyl-source-stream'),
-      plumber = require('gulp-plumber'),
-      notify = require('gulp-notify'),
-      svgmin = require('gulp-svgmin'),
-      svgstore = require('gulp-svgstore'),
-      cheerio = require('gulp-cheerio'),
-      rename = require('gulp-rename');
+  postcss = require('gulp-postcss'),
+  cssnano = require('cssnano'),
+  sourcemaps = require('gulp-sourcemaps'),
+  browserify = require('browserify'),
+  browserSync = require('browser-sync'),
+  buffer = require('vinyl-buffer'),
+  source = require('vinyl-source-stream'),
+  plumber = require('gulp-plumber'),
+  notify = require('gulp-notify'),
+  svgmin = require('gulp-svgmin'),
+  svgstore = require('gulp-svgstore'),
+  cheerio = require('gulp-cheerio'),
+  rename = require('gulp-rename');
 
 /**
  * Paths
@@ -52,7 +51,6 @@ function handleJSErrors() {
  */
 gulp.task('css', function () {
   const plugins = [
-    postcssnext(),
     cssnano()
   ];
   return gulp.src(`${paths.css}/main.css`)
@@ -65,7 +63,7 @@ gulp.task('css', function () {
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${paths.dist}/css`))
-    .pipe(browserSync.reload({ stream: true }))
+    .pipe(browserSync.stream({ match: '**/*.css' }))
     .pipe(notify('CSS Success!'));
 });
 
@@ -107,7 +105,7 @@ gulp.task('js', function () {
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${paths.dist}/js/`))
-    .pipe(browserSync.reload({ stream: true }))
+    .pipe(browserSync.stream({ match: '**/*.js' }))
     .pipe(notify('JS Success!'));
 });
 
