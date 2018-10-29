@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "gulp dev",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
