@@ -19,8 +19,9 @@
   },
   "homepage": "https://github.com/jmacaluso711/wp-theme#readme",
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^7.3.0",
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "7.1.0",
+    "babelify": "10.0.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
     "cssnano": "^3.10.0",

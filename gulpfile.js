@@ -98,8 +98,8 @@ gulp.task('svg', function (svg) {
  * JS Build
  */
 gulp.task('js', function () {
-  return browserify(`${paths.js}/main.js`, { debug: true, extensions: ['es6'] })
-    .transform("babelify", { presets: ["es2015"] })
+  return browserify(`${paths.js}/main.js`, { debug: true })
+    .transform("babelify", { presets: ["@babel/preset-env"] })
     .bundle()
     .on('error', handleJSErrors)
     .pipe(source('bundle.js'))
