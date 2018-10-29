@@ -1,22 +1,22 @@
-const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-const postcssnext = require('postcss-cssnext');
-const cssnano = require('cssnano');
-const sourcemaps = require('gulp-sourcemaps');
-const browserify = require('browserify');
-const browserSync = require('browser-sync');
-const buffer = require('vinyl-buffer');
-const source = require('vinyl-source-stream');
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
-const svgmin = require('gulp-svgmin');
-const svgstore = require('gulp-svgstore');
-const cheerio = require('gulp-cheerio');
-const rename = require('gulp-rename');
+const gulp = require('gulp'),
+      postcss = require('gulp-postcss'),
+      postcssnext = require('postcss-cssnext'),
+      cssnano = require('cssnano'),
+      sourcemaps = require('gulp-sourcemaps'),
+      browserify = require('browserify'),
+      browserSync = require('browser-sync'),
+      buffer = require('vinyl-buffer'),
+      source = require('vinyl-source-stream'),
+      plumber = require('gulp-plumber'),
+      notify = require('gulp-notify'),
+      svgmin = require('gulp-svgmin'),
+      svgstore = require('gulp-svgstore'),
+      cheerio = require('gulp-cheerio'),
+      rename = require('gulp-rename');
 
-/*
-  Paths
-*/
+/**
+ * Paths
+ */
 const paths = {
   css: './css/',
   js: './js/',
@@ -24,9 +24,10 @@ const paths = {
   dist: './dist'
 }
 
-/*
-  Error Handlers
-*/
+/**
+ * CSS Error Handler
+ * @param {Object} err
+ */
 function handleCSSErrors(err) {
   notify.onError({
     title: 'Gulp error in ' + err.plugin,
@@ -34,6 +35,9 @@ function handleCSSErrors(err) {
   })(err);
 }
 
+/**
+ * JS Error Handler
+ */
 function handleJSErrors() {
   const args = Array.prototype.slice.call(arguments);
   notify.onError({
@@ -43,9 +47,9 @@ function handleJSErrors() {
   this.emit('end');
 }
 
-/*
-  CSS
-*/
+/**
+ * CSS
+ */
 gulp.task('css', function () {
   const plugins = [
     postcssnext(),
@@ -65,10 +69,9 @@ gulp.task('css', function () {
     .pipe(notify('CSS Success!'));
 });
 
-
-/*
-   SVG
-*/
+/**
+ * SVG
+ */
 gulp.task('svg', function (svg) {
   return gulp
     .src(`${paths.svg}/*.svg`)
@@ -91,9 +94,9 @@ gulp.task('svg', function (svg) {
     .pipe(gulp.dest('img/svg-sprite/'))
 });
 
-/*
-  JS
-*/
+/**
+ * JS Build
+ */
 gulp.task('js', function () {
   return browserify(`${paths.js}/main.js`, { debug: true, extensions: ['es6'] })
     .transform("babelify", { presets: ["es2015"] })
@@ -108,29 +111,31 @@ gulp.task('js', function () {
     .pipe(notify('JS Success!'));
 });
 
-/*
-  Browser Sync
-*/
+/**
+ * Browser sync
+ */
 gulp.task('browser-sync', function () {
   const config = {
     ghostMode: false,
-    // server: {
-    //   baseDir: "./"
-    // }
   };
   return browserSync(config);
 });
 
-/*
-  Watch
-*/
+/**
+ * Watch
+ */
 gulp.task('watch', function () {
   gulp.watch(`${paths.js}/**/*.js`, ['js']);
   gulp.watch(`${paths.css}/**/*.css`, ['css']);
   gulp.watch(`${paths.svg}/*.svg`, ['svg']);
 });
 
-/*
-  Run
-*/
-gulp.task('run', ['js', 'css', 'svg', 'watch', 'browser-sync']);
+/**
+ * Build
+ */
+gulp.task('build', ['js', 'css', 'svg']);
+
+/**
+ * Dev
+ */
+gulp.task('dev', ['js', 'css', 'svg', 'watch', 'browser-sync']);

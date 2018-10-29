@@ -4,7 +4,7 @@
   "description": "Boilerplate theme for WordPress sites.",
   "main": "main.js",
   "scripts": {
-    "start": "gulp run",
+    "start": "gulp dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
