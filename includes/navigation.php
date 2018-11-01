@@ -1,9 +1,5 @@
 <?php
 
-/* -------------------------------------------------------------------
-   Navigation
-------------------------------------------------------------------- */
-  
   /**
    * WP Navigation
    */
@@ -17,16 +13,18 @@
    * Get top parent page id - used in page subnav function
    */
   function get_top_parent_page_id() {
-      global $post;
-      $ancestors = $post->ancestors;
-      if ( $ancestors ) {
-          return end( $ancestors );
-      } else {
-          return $post->ID;
-      }
+    global $post;
+    $ancestors = $post->ancestors;
+    if ( $ancestors ) {
+      return end( $ancestors );
+    } else {
+      return $post->ID;
+    }
   }
 
-  // page subnav function
+  /**
+   * Page subnav function
+   */
   function page_subnav( $title = '' ) {
     global $post;
     if ( is_page() ) {
@@ -75,14 +73,14 @@
         'echo' => 0
       ) );
       if ( $top_parent_children != '<li>No categories</li>' ) { ?>
-            <nav class="widget widget-subnav">
-                <h1 class="widget-title nav-title">'<?php echo $top_parent_name; ?></h1>
-                    <div class="widget-content">
-                        <ul class="menu menu-secondary">
-                            <?php echo $top_parent_children; ?>
-                        </ul>
-                    </div>
-            </nav>
+        <nav class="widget widget-subnav">
+          <h1 class="widget-title nav-title">'<?php echo $top_parent_name; ?></h1>
+          <div class="widget-content">
+            <ul class="menu menu-secondary">
+              <?php echo $top_parent_children; ?>
+            </ul>
+          </div>
+        </nav>
      <?php }
     }
   }
@@ -117,8 +115,8 @@
       <ul class="menu menu-secondary">
         <?php echo $top_parent_children; ?>
       </ul>
-    </div><!-- .widget-content -->
-  </nav><!-- .widget.widget-subnav.widget-subnav-taxonomies -->
+    </div>
+  </nav>
   <?php
       }
     }

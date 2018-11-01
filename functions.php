@@ -2,7 +2,7 @@
 
 // INCLUDES
 
-// Original boilerplate functions
+// WP-Theme Functions
 require_once(get_stylesheet_directory() . '/includes/utilities.php');
 require_once(get_stylesheet_directory() . '/includes/enqueue.php');
 require_once(get_stylesheet_directory() . '/includes/thumbnails.php');

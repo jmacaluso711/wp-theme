@@ -1,43 +1,39 @@
 <?php
 
-/* -------------------------------------------------------------------
-    Enqueue Stuff
-------------------------------------------------------------------- */
-
-    // Header Scripts
+    /**
+     * Header scripts
+     */
     function header_scripts() {
 
     }
     add_action('wp_head', 'header_scripts');
 
-    // Footer Scripts
+    /**
+     * Footer scripts
+     */
     function footer_scripts() {
 
     }
     add_action('wp_footer', 'footer_scripts');
 
     function theme_scripts() {
-      //Stylesheets
+      /**
+       * Stylesheets
+       */
       wp_enqueue_style( 'screen', get_stylesheet_uri() );
       wp_enqueue_style( 'main', get_template_directory_uri().'/dist/css/main.css' );
 
-      //jQuery
-      // wp_deregister_script('jquery');
-      // wp_enqueue_script('jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', array(), '3.1.0', true);
-
-      //Plugins
-      // wp_register_script( 'modernizr', get_template_directory_uri() . '/bower_components/modernizr-min/dist/modernizr.min.js', array(), '3.2.0', false );
-
-      //Custom Scripts
+      /**
+       * Custom js bundle
+       */
       wp_register_script( 'main', get_template_directory_uri() . '/dist/js/bundle.js', array(), '1.0.0', true );
 
-      //Enqueue Scripts
-      // wp_enqueue_script('modernizr');
+      /**
+       * Enqueue js
+       */
       wp_enqueue_script('jquery');
       wp_enqueue_script('main');
-
     }
-
     add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
 ?>
