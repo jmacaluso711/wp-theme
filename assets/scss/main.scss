@@ -1,30 +1,30 @@
-/* Settings */
+/* 01. Settings */
 @import '01-settings/settings.colors';
 @import '01-settings/settings.spacing';
 @import '01-settings/settings.breakpoints';
 @import '01-settings/settings.transitions';
 @import '01-settings/settings.z-layers';
 
-/* Tools */
+/* 02. Tools */
 @import '02-tools/tools.hidden';
 @import '02-tools/tools.typography';
 @import '02-tools/tools.placeholders';
 
-/* Generic */
+/* 03. Generic */
 @import '03-generic/generic.normalize';
 @import '03-generic/generic.selection';
 
-/* Elements */
+/* 04. Elements */
 @import '04-elements/elements.all';
 @import '04-elements/elements.html';
 @import '04-elements/elements.body';
 @import '04-elements/elements.links';
 
-/* Objects */
+/* 05. Objects */
 @import '05-objects/objects.container';
 
-/* Components */
-@import '06-components/components.container';
+/* 06. Components */
+@import '06-components/components.buttons';
 
-/* Utilities */
+/* 99. Utilities */
 @import '99-utilities/utilities.text'
