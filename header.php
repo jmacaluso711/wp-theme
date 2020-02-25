@@ -29,43 +29,43 @@
 
 </head>
 
-   <body <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 
-    <!-- SVG Sprite
-    ================================================== -->
-    <?php include('img/svg-sprite/svg.svg'); ?>
+  <!-- SVG Sprite
+  ================================================== -->
+  <?php include('assets/img/svg-sprite/svg.svg'); ?>
 
-   	<div class="site">
+  <div class="o-site">
 
-      <header class="site-header">
+    <header class="c-site-header">
 
-        <div class="site-header__logo"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
+      <div class="c-logo c-logo--large"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
 
-          <?php if (has_nav_menu( 'primary' )) : ?>
+        <?php if (has_nav_menu( 'primary' )) : ?>
 
-            <nav class="site-nav">
+          <nav class="c-main-nav">
 
-                <?php
-                  wp_nav_menu(
-                  array(
-                    'container_class' => 'site-nav__container',
-                    'depth' => 2,
-                    'theme_location' => 'primary',
-                    'link_before' => '<span>',
-                    'link_after' => '</span>',
-                    'menu_class' => 'primary-nav'
-                  )
-              );
-                ?>
+              <?php
+                wp_nav_menu(
+                array(
+                  'container_class' => 'c-main-nav__container',
+                  'depth' => 2,
+                  'theme_location' => 'primary',
+                  'link_before' => '<span>',
+                  'link_after' => '</span>',
+                  'menu_class' => 'c-main-nav__items'
+                )
+            );
+              ?>
 
-            </nav>
+          </nav>
 
-          <?php else : ?>
+        <?php else : ?>
 
-        <p>Please set Primary nav.</p>
+      <p>Please set Primary nav.</p>
 
-      <?php endif; ?>
+    <?php endif; ?>
 
-      </header>
+    </header>
 
-      <div class="site-content">
+    <main>
