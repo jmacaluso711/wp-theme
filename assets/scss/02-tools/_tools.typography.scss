@@ -7,7 +7,7 @@
     @if $breakpoint == null {
       font-size: $font-size;
     } @else {
-        @include breakpoint($breakpoint) {
+        @include respond-below($breakpoint) {
           font-size: $font-size;
         }
     }
