@@ -62,7 +62,7 @@ gulp.task('sass', function () {
     .pipe(postcss([autoprefixer()]))
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(`${paths.dist}/scss`))
+    .pipe(gulp.dest(`${paths.dist}/css`))
     .pipe(browserSync.stream({ match: '**/*.scss' }))
     .pipe(notify('SCSS Success!'));
 });
