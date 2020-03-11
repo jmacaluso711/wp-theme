@@ -22,15 +22,14 @@
   Examples
 */
 
-/*
-$html-font-size: (null: 16px, $md: 15px, $sm: 14px, $xs: 13px);
-$paragraph-font-size: (null: 18px, $lg: 17px, $md: 16px, $sm: 15px, $xs: 14px);
 
-html {
-  @include font-size-map($html-font-size);
-}
+// $html-font-size: (null: 16px, md: 15px, sm: 14px, xs: 13px);
+// $paragraph-font-size: (null: 18px, lg: 17px, md: 16px, sm: 15px, xs: 14px);
 
-p {
-  @include font-size-map($paragraph-font-size);
-}
-*/
+// html {
+//   @include font-size-map($html-font-size);
+// }
+
+// p {
+//   @include font-size-map($paragraph-font-size);
+// }
