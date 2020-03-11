@@ -1,0 +1,28 @@
+/* ==========================================================================
+  BODY
+  ========================================================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: $font-body;
+  line-height: 1.2;
+  color: $color-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.is-blocked,
+  &.is-modal-open,
+  &.is-gradpanel-open {
+    overflow: hidden;
+  }
+
+  &.is-nav-mobile-open {
+    overflow: hidden;
+
+    @include respond-below(sm) {
+      overflow: visible;
+    }
+  }
+}

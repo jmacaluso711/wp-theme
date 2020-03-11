@@ -1,0 +1,35 @@
+/* ==========================================================================
+  TYPOGRAPHY
+  ========================================================================== */
+
+@mixin font-size-map($font-size-map) {
+  @each $breakpoint, $font-size in $font-size-map {
+    @if $breakpoint == null {
+      font-size: $font-size;
+    } @else {
+        @include respond-below($breakpoint) {
+          font-size: $font-size;
+        }
+    }
+  }
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+/**
+  Examples
+*/
+
+
+// $html-font-size: (null: 16px, md: 15px, sm: 14px, xs: 13px);
+// $paragraph-font-size: (null: 18px, lg: 17px, md: 16px, sm: 15px, xs: 14px);
+
+// html {
+//   @include font-size-map($html-font-size);
+// }
+
+// p {
+//   @include font-size-map($paragraph-font-size);
+// }

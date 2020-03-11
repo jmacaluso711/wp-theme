@@ -1,0 +1,75 @@
+$grid-gap: 20px;
+$grid-cols: 8;
+$margin: $grid-gap + 10;
+
+* {
+  box-sizing: border-box;
+}
+
+/**
+  Grid
+*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat($grid-cols, minmax(0, 1fr));
+  grid-gap: $grid-gap;
+}
+
+/**
+  Grid Columns - Base
+*/
+@for $i from 1 through $grid-cols {
+  .grid > .grid-col-#{$i} {
+    grid-column: span $i;
+  }
+  .grid > .grid-col-md-#{$i} {
+    grid-column: span $grid-cols;
+  }
+  .grid > .grid-col-sm-#{$i} {
+    grid-column: span $grid-cols;
+  }
+}
+
+/**
+  Media - XSmall and up
+*/
+@media (min-width: $breakpoint-xs) {
+  @for $i from 1 through $grid-cols {
+    .grid > .grid-col-xs-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+/**
+  Media - Small and up
+*/
+@media (min-width: $breakpoint-sm) {
+  @for $i from 1 through $grid-cols {
+    .grid > .grid-col-sm-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+/**
+  Media - Medium and up
+*/
+@media (min-width: $breakpoint-md) {
+  @for $i from 1 through $grid-cols {
+    .grid > .grid-col-md-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+/**
+  Media - Large and up
+*/
+@media (min-width: $breakpoint-lg) {
+  @for $i from 1 through $grid-cols {
+    .grid > .grid-col-lg-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}

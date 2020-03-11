@@ -1,6 +1,8 @@
 const gulp = require('gulp'),
+  autoprefixer = require('autoprefixer'),
   postcss = require('gulp-postcss'),
   cssnano = require('cssnano'),
+  sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
   browserify = require('browserify'),
   browserSync = require('browser-sync'),
@@ -17,9 +19,9 @@ const gulp = require('gulp'),
  * Paths
  */
 const paths = {
-  css: './css/',
-  js: './js/',
-  svg: './svg/',
+  scss: './assets/scss/',
+  js: './assets/js/',
+  svg: './assets/svg/',
   dist: './dist'
 }
 
@@ -47,24 +49,22 @@ function handleJSErrors() {
 }
 
 /**
- * CSS
+ * SCSS
  */
-gulp.task('css', function () {
-  const plugins = [
-    cssnano()
-  ];
-  return gulp.src(`${paths.css}/main.css`)
+gulp.task('sass', function () {
+  return gulp.src(`${paths.scss}/main.scss`)
     .pipe(plumber({
       errorHandler: function (err) {
         handleCSSErrors(err)
       }
     }))
     .pipe(sourcemaps.init())
-    .pipe(postcss(plugins))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${paths.dist}/css`))
-    .pipe(browserSync.stream({ match: '**/*.css' }))
-    .pipe(notify('CSS Success!'));
+    .pipe(browserSync.stream({ match: '**/*.scss' }))
+    .pipe(notify('SCSS Success!'));
 });
 
 /**
@@ -124,16 +124,16 @@ gulp.task('browser-sync', function () {
  */
 gulp.task('watch', function () {
   gulp.watch(`${paths.js}/**/*.js`, ['js']);
-  gulp.watch(`${paths.css}/**/*.css`, ['css']);
+  gulp.watch(`${paths.scss}/**/*.scss`, ['sass']);
   gulp.watch(`${paths.svg}/*.svg`, ['svg']);
 });
 
 /**
  * Build
  */
-gulp.task('build', ['js', 'css', 'svg']);
+gulp.task('build', ['js', 'sass', 'svg']);
 
 /**
  * Dev
  */
-gulp.task('dev', ['js', 'css', 'svg', 'watch', 'browser-sync']);
+gulp.task('dev', ['js', 'sass', 'svg', 'watch', 'browser-sync']);

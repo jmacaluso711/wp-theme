@@ -1,0 +1,18 @@
+/* ==========================================================================
+  BREAKPOINTS
+  ========================================================================== */
+
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1170px;
+
+$breakpoints: (
+  lg: $breakpoint-lg,
+  md: $breakpoint-md,
+  sm: $breakpoint-sm,
+  xs: $breakpoint-xs
+);
+
+$browser-context: 16;
+$max-width: 1170px;
