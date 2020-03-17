@@ -11,6 +11,7 @@ require_once(get_stylesheet_directory() . '/includes/pagination.php');
 require_once(get_stylesheet_directory() . '/includes/widgets.php');
 require_once(get_stylesheet_directory() . '/includes/post-metas.php');
 require_once(get_stylesheet_directory() . '/includes/custom-post-types.php');
+require_once(get_stylesheet_directory() . '/includes/custom-taxonomies.php');
 
 // ACF HOOKS
 require_once(get_stylesheet_directory() . '/includes/acf-hooks.php');
