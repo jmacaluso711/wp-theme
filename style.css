@@ -6,3 +6,7 @@
   Version:
   Tags: clean, minimal
 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

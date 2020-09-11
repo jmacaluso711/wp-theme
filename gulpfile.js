@@ -59,7 +59,10 @@ gulp.task('sass', function () {
       }
     }))
     .pipe(sourcemaps.init())
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([
+      require('tailwindcss'),
+      autoprefixer()
+    ]))
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${paths.dist}/css`))
