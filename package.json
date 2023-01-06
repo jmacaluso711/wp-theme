@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/jmacaluso711/wp-theme#readme",
   "devDependencies": {
-    "@babel/core": "7.1.2",
+    "@babel/core": "7.20.12",
     "@babel/preset-env": "7.1.0",
     "autoprefixer": "9.7.4",
     "babelify": "10.0.0",
